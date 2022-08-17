@@ -1,0 +1,44 @@
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+
+.about {
+  overflow: hidden;
+
+  &.section{
+    padding-top:120px
+  }
+
+  .about-banner { margin-block-end: 50px; }
+
+  .section-title{
+    color: $c-blue-primary
+  }
+
+  .section-text {
+    margin-block-end: 15px;
+    font-size: $fs-3;
+    font-weight: $fw-900;
+    color: $c-blue-primary;
+
+    &:not(:last-of-type) {
+      margin-block-end: 15px;
+      font-size: $fs-5;
+      color: $c-black
+    }
+  }
+}
+
+
+
+@keyframes moveUp {
+  0%,
+  30%,
+  60%,
+  100% { transform: translateY(0); }
+
+  20% { transform: translateY(-30px); }
+
+  40% { transform: translateY(-15px); }
+}

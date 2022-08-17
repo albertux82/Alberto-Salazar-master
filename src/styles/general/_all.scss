@@ -1,0 +1,334 @@
+@import 'typography';
+@import 'variables';
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a,
+img,
+span,
+input,
+button,
+strong,
+ion-icon {
+    display: block;
+}
+
+img {
+    height: auto;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+address {
+    font-style: normal;
+}
+
+html {
+    font-family: $f-montserrat;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $c-white;
+    color: $c-blue-primary;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+:focus-visible {
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $c-yellow;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $c-blue-primary;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $c-blue-light;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.bg-dark {
+    background-color: $c-blue-primary;
+    color: $c-white;
+}
+
+.bg-yellow {
+    background-color: $c-yellow;
+    color: $c-white;
+}
+
+.bg-orange {
+    background-color: $c-orange;
+    color: $c-white;
+}
+
+
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+}
+
+.has-before,
+.has-after {
+    position: relative;
+    z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+    content: "";
+    position: absolute;
+}
+
+.h1,
+.h2,
+.h3 {
+    font-family: $f-montserrat;
+    line-height: 1.25;
+}
+
+.h1 {
+    color: $c-white;
+    font-size: $fs-1;
+    font-weight: $fw-900;
+}
+
+
+.h2,
+.h3 {
+    color: $c-black;
+    font-weight: $fw-800;
+}
+
+.h2 {
+    font-size: $fs-2;
+}
+
+.h3 {
+    font-size: $fs-4;
+}
+
+
+.btn {
+    max-width: max-content;
+    font-size: $fs-6;
+    font-weight: $fw-500;
+    padding: 15px 35px;
+    border-radius: $radius-8;
+    transition: $transition-1;
+}
+
+.btn-primary {
+    background-color: $c-orange;
+    color: $c-white;
+}
+
+.btn-primary:is(:hover, :focus) {
+    background-color: $c-blue-light;
+    color: $c-white;
+    box-shadow: $shadow-2;
+}
+
+.btn-secondary {
+    background-color: $c-blue-light;
+    color: $c-white;
+}
+
+.btn-secondary:is(:hover, :focus) {
+    background-color: $c-blue-primary;
+    color: $c-white;
+}
+
+.btn-danger {
+    background-color: $c-red  !important;
+    color: $c-white;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.truncate {
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+}
+
+.t-1 {
+    -webkit-line-clamp: 1;
+}
+
+.t-2 {
+    -webkit-line-clamp: 2;
+}
+
+.center {
+    margin: 0 auto
+}
+
+.circle {
+    position: absolute;
+}
+
+.circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56%);
+    width: 100%;
+    z-index: -1;
+    animation: rotate360 15s linear infinite;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: translate(-50%, -56%) rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -56%) rotate(1turn);
+    }
+}
+
+.circle-2 {
+    animation-direction: reverse;
+}
+
+.hero-subtitle,
+.section-subtitle {
+    font-family: $f-montserrat;
+    font-weight: $fw-700;
+    max-width: max-content;
+}
+
+.section-subtitle {
+    background-color: $c-orange;
+    color: $c-black;
+    padding: 8px 20px;
+    border-radius: $radius-8;
+}
+
+.section-title {
+    margin-block: 18px 35px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-holder {
+    aspect-ratio: var(--width) / var(--height);
+    background-color: $c-white-off;
+    overflow: hidden;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.has-scrollbar {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-block-end: 30px;
+    scroll-snap-type: inline mandatory;
+}
+
+.scrollbar-item {
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+    height: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track,
+.has-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: $c-orange;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+    width: calc(25% - 25px);
+}
+
+.overlay {
+    background-color: rgb(39 23 0 / 81%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: 0;
+}

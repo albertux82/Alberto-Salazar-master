@@ -1,0 +1,19 @@
+.partners{
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+
+        .partner-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            img{
+                display:inline
+            }
+        }
+    }
+}

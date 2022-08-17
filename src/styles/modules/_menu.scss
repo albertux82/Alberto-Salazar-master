@@ -1,0 +1,101 @@
+/*-----------------------------------*\
+  #MENU
+\*-----------------------------------*/
+
+/* .menu { padding-block-start: calc(var(--section-padding) + 250px; } */
+
+.menu {
+    position: relative;
+
+    .section-subtitle {
+        margin-inline: auto;
+    }
+
+    .section-title {
+        color: $c-white;
+    }
+
+    .section-note {
+        text-align: center;
+        font-size: $fs-6;
+        color: $c-blue-primary;
+    }
+
+    ul.menu-ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-card {
+        background-color: $c-white;
+        border-radius: $radius-10;
+        height: 100%;
+        overflow: hidden;
+
+        .card-banner img {
+            transition: $transition-2;
+        }
+
+        &:is(:hover, :focus-within) .card-banner img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 24px;
+
+            .title-wrapper {
+                display: flex;
+                align-items: center;
+
+                .card-title {
+                    transition: $transition-1;
+                    font-family: $f-montserrat;
+
+                    &:is(:hover, :focus) {
+                        color: $c-yellow;
+                    }
+                }
+
+            }
+
+            .card-text {
+                color: $c-black;
+                font-size: $fs-6;
+                margin-block: 16px 12px;
+            }
+
+            .product-price {
+                color: $c-orange;
+                font-weight: $fw-800;
+                font-size: $fs-3;
+            }
+
+            .progress-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: $f-roboto;
+                color: $c-black;
+                font-size: $fs-6;
+                font-weight: $fw-800;
+                margin-block-end: 8px;
+
+                .progress-bg {
+                    background-color: $c-orange;
+                    border-radius: 50px;
+                }
+            }
+
+            .progress-bar {
+                background-color: $c-yellow;
+                height: 10px;
+                border-radius: inherit;
+            }
+
+        }
+
+    }
+
+}

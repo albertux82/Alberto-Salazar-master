@@ -1,0 +1,45 @@
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+.hero {
+    color: $c-yellow;
+    text-align: center;
+    padding-block-start: calc($section-padding) + 80px;
+    padding-block-end: 0;
+    overflow: hidden;
+
+    .hero-content {
+        margin-block-end: 90px;
+
+        .hero-title {
+            margin-block: 30px 8px;
+        }
+        
+        .hero-subtitle {
+            background-color: $c-blue-primary;
+            color: $c-yellow;
+            margin-inline: auto;
+            padding: 5px;
+            padding-inline-end: 15px;
+            border-radius: $radius-8;
+
+            .strong {
+                display: inline-block;
+                background-color: $c-yellow;
+                color: $c-red;
+                padding: 2px 15px;
+                margin-inline-end: 15px;
+                border-radius: $radius-5;
+            }
+        }
+
+        .btn {
+            margin-inline: auto;
+        }
+        
+        .hero-banner {
+            position: relative;
+        }
+    }
+}

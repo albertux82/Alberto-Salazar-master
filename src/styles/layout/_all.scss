@@ -1,0 +1,42 @@
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+.container {
+  padding-inline: 15px;
+  position: relative;
+}
+
+.section {
+  padding-block: $section-padding;
+}
+
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background-color: $c-blue-primary;
+  color: $c-white;
+  font-size: 20px;
+  padding: 11px;
+  border-radius: 50%;
+  border: 2px solid $c-blue-light;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-1;
+  z-index: 4;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  &:hover{
+    background-color: $c-blue-light;
+    border-color: $c-yellow;
+  }
+}

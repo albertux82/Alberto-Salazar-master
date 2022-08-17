@@ -1,0 +1,45 @@
+/*-----------------------------------*\
+  #LOCALIZATION
+\*-----------------------------------*/
+
+.section.localization {
+    padding-block: 0px;
+}
+
+.localization {
+    position: relative;
+
+    .section-map {
+        height: 450px;
+        width: 100%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: baseline;
+        gap: 35px;
+        padding-top: 30px;
+
+        .section-text {
+            background-color: $c-yellow;
+            color: $c-black;
+            padding: 8px 20px;
+            border-radius: $radius-8;
+            margin-top: -100%;
+            padding: 20px;
+
+            .section-title {
+                background: $c-blue-primary;
+                text-align: left;
+                color: $c-white;
+                font-size: $fs-2;
+                font-weight: $fw-900;
+                padding: 0px 25px;
+                border-radius: 10px 50px;
+                border: 5px dotted $c-yellow;
+            }
+        }       
+    }
+
+}
