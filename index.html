@@ -16,6 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
 
   <!-- preload images  -->
+  <link rel="preload" as="video" href="./src/assets/videos/hero-video.mp4">
   <link rel="preload" as="image" href="./src/assets/images/header/lph-logo.png">
   <link rel="preload" as="image" href="./src/assets/images/general/mr-fring.png">
   <link rel="preload" as="image" href="./src/assets/images/footer/footer-bg.jpg">
@@ -41,7 +42,7 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            <a href="#" class="navbar-link" data-nav-link>Home</a>
           </li>
 
           <li>
@@ -67,7 +68,6 @@
       </button>
 
 
-      <!-- Default Design -->
       <div class="dropdown-container">
         <div class="dropdown-toggle hover-dropdown">
           <i class="fa fa-shopping-basket"></i>
@@ -87,8 +87,41 @@
   <main>
     <article>
 
-      <!-- #HERO -->
-      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+
+      <!-- #HERO2 -->
+      <div class="hero2" id="home1" aria-label="hero2">
+
+        <video autoplay loop muted plays-inline class="back-video">
+          <source src="./src/assets/videos/hero-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+
+          <div class="content-1">
+
+            <h1>¡Order fried chicken <span class="enfasis">now!</span></h1>
+            <h2>Get famous chicken however you want it.</h2>
+
+            <a href="#menu" class="btn btn-primary"><i class="fa fa-cart-plus"></i> Order Now</a>
+
+          </div>
+
+          <div class="content-2">
+
+            <img src="./src/assets/images/general/mr-fring.png" width="660" height="753" alt="hero banner"
+              class="w-100">
+
+            <img src="./src/assets/images/general/hero-circle-one.png" width="666" height="666" aria-hidden="true"
+              alt="" class="circle circle-1">
+            <img src="./src/assets/images/general/hero-circle-two.png" width="666" height="666" aria-hidden="true"
+              alt="" class="circle circle-2">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- #HERO1-->
+      <!-- <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
         style="background-image: url('./src/assets/images/general/tenders-02.jpg')">
         <div class="overlay"></div>
         <div class="container">
@@ -116,7 +149,7 @@
           </div>
 
         </div>
-      </section>
+      </section> -->
 
 
       <!-- #ABOUT -->

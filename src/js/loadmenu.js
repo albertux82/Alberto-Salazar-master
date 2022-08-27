@@ -59,6 +59,7 @@ const addCarrito = (e) => {
     let obj = e.target.parentElement.parentElement.parentElement;
     setCarrito(obj);
   }
+  //stopPropagation() method stops the bubbling of an event to parent elements, preventing any parent event handlers from being executed.
   e.stopPropagation();
 };
 

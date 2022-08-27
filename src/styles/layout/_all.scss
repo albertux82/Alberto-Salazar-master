@@ -1,6 +1,11 @@
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+
+body{
+  overflow-x: hidden;
+}
+
 .container {
   padding-inline: 15px;
   position: relative;
